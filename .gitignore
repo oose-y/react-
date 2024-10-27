@@ -1,0 +1,53 @@
+# 共通依存
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# フロントエンド：React (`create-react-app`) 用
+/frontend/node_modules
+/frontend/coverage
+/frontend/build
+/frontend/.cache
+
+# バックエンド：Next.js 用
+/backend/node_modules
+/backend/.next
+/backend/out
+/backend/prisma/.env
+/backend/prisma/generated
+/backend/coverage
+
+# 共通：misc
+.DS_Store
+*.pem
+
+# デバッグログ
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 環境変数ファイル
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# IDE/エディタ設定
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# ESLint キャッシュ
+.eslintcache
+
+# その他キャッシュとビルド成果物
+/.cache
+/dist
