@@ -17,6 +17,8 @@ type CreateUserArgs = {
 export const resolvers = {
   Query: {
     users: async (_parent: unknown, _args: unknown, _context: unknown, _info: GraphQLResolveInfo) => {
+      // 2秒の遅延を追加
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       return await prisma.user.findMany();
     },
     user: async (_parent: unknown, args: UserArgs) => {
